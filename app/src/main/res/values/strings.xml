@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Secondary Display Sample</string>
+    <string-array name="text_sizes">
+        <item >SMALL</item>
+        <item >MEDIUM</item>
+        <item >BIG</item>
+        <item >GIANT</item>
+    </string-array>
+    <string-array name="text_colors">
+        <item >WHITE</item>
+        <item >BLUE</item>
+        <item >GREEN</item>
+        <item >YELLOW</item>
+        <item >RED</item>
+    </string-array>
+    <string name="display_text">Text to display: </string>
+    <string name="show_text">Show Text</string>
+    <string name="hide_text">Hide Text</string>
+    <string name="draw_text">Draw Text</string>
+    <string name="clear_text">Clear Text</string>
+    <string name="text_size">Text Size: </string>
+    <string name="text_color">Text Color: </string>
+    <string name="display_text_hint">Enter here the text to display</string>
+    <string name="text_visibility">Text Visibility:</string>
+
+</resources>
