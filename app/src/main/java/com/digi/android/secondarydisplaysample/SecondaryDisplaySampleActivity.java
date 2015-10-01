@@ -1,4 +1,4 @@
-package com.example.android.secondarydisplaysample;
+package com.digi.android.secondarydisplaysample;
 
 import android.app.Activity;
 import android.content.Context;
