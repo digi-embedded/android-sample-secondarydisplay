@@ -26,6 +26,17 @@ import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.AdapterView.OnItemSelectedListener;
 
+
+/**
+ * Secondary display sample application.
+ *
+ * <p>This application demonstrates the usage of the Secondary Display API in Android
+ * by giving an example of controlling the contents of the secondary display using
+ * controls in the primary screen.</p>
+ *
+ * <p>For a complete description on the example, refer to the 'README.md' file
+ * included in the example directory.</p>
+ */
 public class SecondaryDisplaySampleActivity extends Activity {
 	
 	// Variables.
