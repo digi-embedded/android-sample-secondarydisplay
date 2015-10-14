@@ -1,3 +1,15 @@
+/**
+ * Copyright (c) 2014-2015 Digi International Inc.,
+ * All rights not expressly granted are reserved.
+ *
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this file,
+ * You can obtain one at http://mozilla.org/MPL/2.0/.
+ *
+ * Digi International Inc. 11001 Bren Road East, Minnetonka, MN 55343
+ * =======================================================================
+ */
+
 package com.digi.android.secondarydisplaysample;
 
 import android.app.Presentation;
@@ -8,19 +20,19 @@ import android.view.Display;
 import android.view.View;
 import android.widget.TextView;
 
-public class BlackBoard extends Presentation {
+class BlackBoard extends Presentation {
 
 	// Constants.
-	public final static int SIZE_SMALL = 0;
-	public final static int SIZE_MEDIUM = 1;
-	public final static int SIZE_BIG = 2;
-	public final static int SIZE_GIANT = 3;
+	private final static int SIZE_SMALL = 0;
+	private final static int SIZE_MEDIUM = 1;
+	private final static int SIZE_BIG = 2;
+	private final static int SIZE_GIANT = 3;
 	
-	public final static int COLOR_WHITE = 0;
-	public final static int COLOR_BLUE = 1;
-	public final static int COLOR_GREEN = 2;
-	public final static int COLOR_YELLOW = 3;
-	public final static int COLOR_RED = 4;
+	private final static int COLOR_WHITE = 0;
+	private final static int COLOR_BLUE = 1;
+	private final static int COLOR_GREEN = 2;
+	private final static int COLOR_YELLOW = 3;
+	private final static int COLOR_RED = 4;
 	
 	private final static float SMALL_DP = 50.0f;
 	private final static float MEDIUM_DP = 80.0f;
@@ -29,7 +41,7 @@ public class BlackBoard extends Presentation {
 			
 	private TextView displayText;
 	
-	private Context context;
+	private final Context context;
 	
 	/**
 	 * Class constructor. Instances a new BlackBoard object with the given parameters.
@@ -40,30 +52,6 @@ public class BlackBoard extends Presentation {
 	public BlackBoard(Context outerContext, Display display) {
 		super(outerContext, display);
 		context = outerContext;
-	}
-	
-	/*
-	 * (non-Javadoc)
-	 * @see android.app.Dialog#onCreate(android.os.Bundle)
-	 */
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		// Set content view.
-		setContentView(R.layout.secondary_display);
-		// Initialize UI Components.
-		initializeUIComponents();
-	}
-
-	/**
-	 * Initializes all the UI components and event listeners.
-	 */
-	private void initializeUIComponents() {
-		displayText = (TextView)findViewById(R.id.blackboard_text);
-		setTextSize(SIZE_MEDIUM);
-		setTextColor(COLOR_WHITE);
-		setTextVisible(true);
-		Typeface type = Typeface.createFromAsset(context.getAssets(), "fonts/blackboardultra.otf"); 
-		displayText.setTypeface(type);
 	}
 	
 	/**
@@ -100,7 +88,7 @@ public class BlackBoard extends Presentation {
 	 * @param size New text size.
 	 */
 	public void setTextSize(int size) {
-		float fontSize = 0;
+		float fontSize;
 		switch (size) {
 		case SIZE_SMALL:
 			fontSize = SMALL_DP;
@@ -147,5 +135,26 @@ public class BlackBoard extends Presentation {
 			displayText.setTextColor(getResources().getColor(R.color.white));
 			break;
 		}
+	}
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		// Set content view.
+		setContentView(R.layout.secondary_display);
+		// Initialize UI Components.
+		initializeUIComponents();
+	}
+
+	/**
+	 * Initializes all the UI components and event listeners.
+	 */
+	private void initializeUIComponents() {
+		displayText = (TextView)findViewById(R.id.blackboard_text);
+		setTextSize(SIZE_MEDIUM);
+		setTextColor(COLOR_WHITE);
+		setTextVisible(true);
+		Typeface type = Typeface.createFromAsset(context.getAssets(), "fonts/blackboardultra.otf");
+		displayText.setTypeface(type);
 	}
 }
