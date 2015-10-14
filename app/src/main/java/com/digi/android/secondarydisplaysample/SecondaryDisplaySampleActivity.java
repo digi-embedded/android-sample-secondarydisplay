@@ -26,17 +26,6 @@ import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.AdapterView.OnItemSelectedListener;
 
-
-/**
- * Secondary display sample application.
- *
- * <p>This application demonstrates the usage of the Secondary Display API in Android
- * by giving an example of controlling the contents of the secondary display using
- * controls in the primary screen.</p>
- *
- * <p>For a complete description on the example, refer to the 'README.md' file
- * included in the example directory.</p>
- */
 public class SecondaryDisplaySampleActivity extends Activity {
 	
 	// Variables.
@@ -45,7 +34,7 @@ public class SecondaryDisplaySampleActivity extends Activity {
 	private RadioButton showTextButton;
 	private RadioButton hideTextButton;
 
-    private Spinner textSizeSpinner;
+	private Spinner textSizeSpinner;
 	private Spinner textColorSpinner;
 	
 	private BlackBoard blackBoard;
@@ -83,22 +72,25 @@ public class SecondaryDisplaySampleActivity extends Activity {
 		// Display text.
 		textToDisplay = (EditText)findViewById(R.id.text_to_display);
 		// Draw text button.
-        Button drawTextButton = (Button) findViewById(R.id.draw_text_button);
+		Button drawTextButton = (Button) findViewById(R.id.draw_text_button);
 		drawTextButton.setOnClickListener(new OnClickListener() {
-            public void onClick(View v) {
-                handleDrawButtonPressed();
-            }
-        });
+			@Override
+			public void onClick(View v) {
+				handleDrawButtonPressed();
+			}
+		});
 		// Clear text button.
-        Button clearTextButton = (Button) findViewById(R.id.clear_text_button);
+		Button clearTextButton = (Button) findViewById(R.id.clear_text_button);
 		clearTextButton.setOnClickListener(new OnClickListener() {
-            public void onClick(View v) {
-                handleClearButtonPressed();
-            }
-        });
+			@Override
+			public void onClick(View v) {
+				handleClearButtonPressed();
+			}
+		});
 		// Show text radio button.
 		showTextButton = (RadioButton)findViewById(R.id.show_text_button);
 		showTextButton.setOnClickListener(new OnClickListener() {
+			@Override
 			public void onClick(View v) {
 				handleShowTextButtonPressed();
 			}
@@ -106,6 +98,7 @@ public class SecondaryDisplaySampleActivity extends Activity {
 		// Hide text radio button.
 		hideTextButton = (RadioButton)findViewById(R.id.hide_text_button);
 		hideTextButton.setOnClickListener(new OnClickListener() {
+			@Override
 			public void onClick(View v) {
 				handleHideTextButtonPressed();
 			}
@@ -113,9 +106,11 @@ public class SecondaryDisplaySampleActivity extends Activity {
 		// Text size spinner.
 		textSizeSpinner = (Spinner)findViewById(R.id.text_size_spinner);
 		textSizeSpinner.setOnItemSelectedListener(new OnItemSelectedListener() {
+			@Override
 			public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
 				handleTextSizeSpinnerSelection();
 			}
+			@Override
 			public void onNothingSelected(AdapterView<?> arg0) {
 				// We will not implement anything here.
 			}
@@ -123,9 +118,11 @@ public class SecondaryDisplaySampleActivity extends Activity {
 		// Text color spinner.
 		textColorSpinner = (Spinner)findViewById(R.id.text_color_spinner);
 		textColorSpinner.setOnItemSelectedListener(new OnItemSelectedListener() {
+			@Override
 			public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
 				handleTextColorSpinnerSelection();
 			}
+			@Override
 			public void onNothingSelected(AdapterView<?> arg0) {
 				// We will not implement anything here.
 			}
