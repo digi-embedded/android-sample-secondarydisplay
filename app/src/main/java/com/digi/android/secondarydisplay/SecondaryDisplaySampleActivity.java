@@ -10,7 +10,7 @@
  * =======================================================================
  */
 
-package com.digi.android.secondarydisplaysample;
+package com.digi.android.secondarydisplay;
 
 import android.app.Activity;
 import android.content.Context;

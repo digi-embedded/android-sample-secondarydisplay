@@ -10,7 +10,7 @@
  * =======================================================================
  */
 
-package com.digi.android.secondarydisplaysample;
+package com.digi.android.secondarydisplay;
 
 import android.app.Presentation;
 import android.content.Context;
@@ -38,7 +38,7 @@ class BlackBoard extends Presentation {
 	private final static float MEDIUM_DP = 80.0f;
 	private final static float BIG_DP = 120.0f;
 	private final static float GIANT_DP = 160.0f;
-			
+	
 	private TextView displayText;
 	
 	private final Context context;
@@ -90,21 +90,21 @@ class BlackBoard extends Presentation {
 	public void setTextSize(int size) {
 		float fontSize;
 		switch (size) {
-		case SIZE_SMALL:
-			fontSize = SMALL_DP;
-			break;
-		case SIZE_MEDIUM:
-			fontSize = MEDIUM_DP;
-			break;
-		case SIZE_BIG:
-			fontSize = BIG_DP;
-			break;
-		case SIZE_GIANT:
-			fontSize = GIANT_DP;
-			break;
-		default:
-			fontSize = MEDIUM_DP;
-			break;
+			case SIZE_SMALL:
+				fontSize = SMALL_DP;
+				break;
+			case SIZE_MEDIUM:
+				fontSize = MEDIUM_DP;
+				break;
+			case SIZE_BIG:
+				fontSize = BIG_DP;
+				break;
+			case SIZE_GIANT:
+				fontSize = GIANT_DP;
+				break;
+			default:
+				fontSize = MEDIUM_DP;
+				break;
 		}
 		displayText.setTextSize(fontSize);
 	}
@@ -116,24 +116,24 @@ class BlackBoard extends Presentation {
 	 */
 	public void setTextColor(int color) {
 		switch (color) {
-		case COLOR_WHITE:
-			displayText.setTextColor(getResources().getColor(R.color.white));
-			break;
-		case COLOR_BLUE:
-			displayText.setTextColor(getResources().getColor(R.color.light_blue));
-			break;
-		case COLOR_GREEN:
-			displayText.setTextColor(getResources().getColor(R.color.light_green));
-			break;
-		case COLOR_YELLOW:
-			displayText.setTextColor(getResources().getColor(R.color.light_yellow));
-			break;
-		case COLOR_RED:
-			displayText.setTextColor(getResources().getColor(R.color.light_red));
-			break;
-		default:
-			displayText.setTextColor(getResources().getColor(R.color.white));
-			break;
+			case COLOR_WHITE:
+				displayText.setTextColor(getResources().getColor(R.color.white));
+				break;
+			case COLOR_BLUE:
+				displayText.setTextColor(getResources().getColor(R.color.light_blue));
+				break;
+			case COLOR_GREEN:
+				displayText.setTextColor(getResources().getColor(R.color.light_green));
+				break;
+			case COLOR_YELLOW:
+				displayText.setTextColor(getResources().getColor(R.color.light_yellow));
+				break;
+			case COLOR_RED:
+				displayText.setTextColor(getResources().getColor(R.color.light_red));
+				break;
+			default:
+				displayText.setTextColor(getResources().getColor(R.color.white));
+				break;
 		}
 	}
 	

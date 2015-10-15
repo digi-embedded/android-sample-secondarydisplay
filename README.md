@@ -13,8 +13,6 @@ To run this example you need:
 * One compatible device to host the application.
 * A USB connection between the device and the host PC in order to transfer and
   launch the application.
-* Establish remote target connection to your Digi hardware before running this
-  application.
 * A secondary display attached to your device, preferably HDMI (Full-HD).
 * U-Boot configured to display video in the primary and secondary displays.
 
