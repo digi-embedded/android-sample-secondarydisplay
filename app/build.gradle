@@ -1,12 +1,11 @@
 apply plugin: 'com.android.application'
-
 android {
-    compileSdkVersion 19
-    buildToolsVersion '19.1.0'
+    compileSdkVersion 22
+    buildToolsVersion '23.0.2'
     defaultConfig {
-        applicationId 'com.digi.android.secondarydisplay'
-        minSdkVersion 19
-        targetSdkVersion 19
+        applicationId 'com.digi.android.sample.secondarydisplay'
+        minSdkVersion 22
+        targetSdkVersion 22
     }
     buildTypes {
         release {

@@ -14,7 +14,7 @@
  * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
 
-package com.digi.android.secondarydisplay;
+package com.digi.android.sample.secondarydisplay;
 
 import android.app.Activity;
 import android.content.Context;
