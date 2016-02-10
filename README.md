@@ -14,13 +14,9 @@ To run this example you need:
 * A USB connection between the device and the host PC in order to transfer and
   launch the application.
 * A secondary display attached to your device, preferably HDMI (Full-HD).
-* U-Boot configured to display video in the primary and secondary displays.
 
 Demo setup
 ----------
-
-Make sure U-Boot is configured to display video in the primary and secondary 
-displays. Check documentation on how to do it.
 
 Make sure the hardware is set up correctly:
 
